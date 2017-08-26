@@ -198,15 +198,12 @@ public class DotsAndBoxes extends Game {
 	}
 	
 	private void makeRandomMove(char[][] field) {
-		System.out.println("Pravq random");
 		Random r = new Random();
 		int row = 0, col = 0;
         boolean isAddTittle = false;
         do {
             row = r.nextInt((this.getBoard().getRow() / 2) + 1) * 2;
-            System.out.println("Row is" + row);
             col = r.nextInt((this.getBoard().getCol() / 2) + 1) * 2;
-            System.out.println("Col is " + col);
             if (isInBounds(row - 2, col) && field[row - 1][col] == ' ') {
                 row = row - 1;
             } else if (isInBounds(row + 2, col) && field[row + 1][col] == ' ') {
