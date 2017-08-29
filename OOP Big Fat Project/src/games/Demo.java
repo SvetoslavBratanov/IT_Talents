@@ -3,6 +3,8 @@ package games;
 import java.util.Scanner;
 
 import dotsAndBoxes.DotsAndBoxes;
+import foxAndHounds.FoxAndHounds;
+import minesweeper.Minesweeper;
 import ticTacToe.TicTacToe;
 
 
@@ -36,10 +38,15 @@ public class Demo {
 				game.run();
 				break;
 			case 3:
-				//game = new Minesweeper();
+				char[][] board = null;
+				boolean[][] revaeled=null;
+				game = new Minesweeper("MineSweeper",new Player(),board,revaeled);
+				game.run();
 				break;
 			case 4:
-				//game = new FoxAndHounds();
+				char[][] field = null;
+				game = new FoxAndHounds("FoxAndHounds",new Player(),field);
+				game.run();
 				break;
 			}
 		
